@@ -14,9 +14,13 @@ function App() {
   const [tag, setTag] = React.useState('');
 
   const inviaMessaggio = (): void => {
-    const post = `title:${titolo}, description: ${description}, tag: ${tag}`
+    const post = {
+        title: titolo,
+        description: description,
+        tag: tag
+    }
     window.Telegram.WebApp.sendData(JSON.stringify(post));
-  };
+};
 
   return (
     <>
