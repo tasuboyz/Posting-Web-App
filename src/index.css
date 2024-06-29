@@ -41,7 +41,7 @@ h1 {
   justify-content: center; /* Centra i contenuti verticalmente */
   align-items: center; /* Centra i contenuti orizzontalmente */
   height: 100vh; /* Imposta l'altezza del container all'altezza della viewport */
-  width: 100vw; /* Imposta la larghezza del container alla larghezza della viewport */
+  width: 70vw; /* Imposta la larghezza del container alla larghezza della viewport */
   padding: 20px; /* Aggiunge un po' di spazio intorno ai contenuti */
   box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza e dell'altezza */
 }
