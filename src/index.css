@@ -1,12 +1,10 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: #E1E1E6;
+  background-color: #121214;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,11 +13,12 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+  color: #8257E5;
+  text-decoration: none;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #996DFF;
 }
 
 body {
@@ -31,60 +30,61 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 3rem;
+  line-height: 1.2;
+  color: #E1E1E6;
 }
-.input-title {
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
+
+.container {
+  display: flex; /* Utilizza flexbox per il layout */
+  flex-direction: column; /* Imposta la direzione dei flex items in verticale */
+  justify-content: center; /* Centra i contenuti verticalmente */
+  align-items: center; /* Centra i contenuti orizzontalmente */
+  height: 100vh; /* Imposta l'altezza del container all'altezza della viewport */
+  width: 100vw; /* Imposta la larghezza del container alla larghezza della viewport */
+  padding: 20px; /* Aggiunge un po' di spazio intorno ai contenuti */
+  box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza e dell'altezza */
 }
 
 .input-description {
-  width: 300px;
+  width: 400px;
   height: 100px;
   padding: 10px;
   margin-bottom: 10px;
   font-size: 16px;
 }
 
-.input-tag {
-  width: 300px;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
+.input-title,
+.input-description,
+.input-tag, 
+.button { 
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  border: 1px solid #323238;
+  background-color: #202024;
+  color: #E1E1E6;
+  margin: 10px 0;
 }
 
-.button {
-  background-color: #0088cc;
+.button,
+button {
+  background-color: #8257E5;
   color: white;
-  padding: 15px 30px;
+  padding: 16px 32px;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.button:hover {
-  background-color: #005f8a;
+.button:hover,
+button:hover {
+  background-color: #996DFF;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -92,13 +92,15 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #323238;
+    background-color: #FAFAFA;
   }
+
   a:hover {
-    color: #747bff;
+    color: #8257E5;
   }
+
   button {
-    background-color: #f9f9f9;
+    background-color: #E1E1E6;
   }
 }
