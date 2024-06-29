@@ -58,10 +58,10 @@ h1 {
 .input-description,
 .input-tag, 
 .button { 
-  width: 80%;
-  padding: 12px;
-  margin-bottom: 16px;
-  font-size: 1rem;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
   border: 1px solid #323238;
   background-color: #202024;
   color: #E1E1E6;
