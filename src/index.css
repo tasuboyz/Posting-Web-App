@@ -9,6 +9,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0 auto;
 }
 
 a {
@@ -21,14 +22,6 @@ a:hover {
   color: #996DFF;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3rem;
   line-height: 1.2;
@@ -36,14 +29,18 @@ h1 {
 }
 
 .container {
-  display: flex; /* Utilizza flexbox per il layout */
-  flex-direction: column; /* Imposta la direzione dei flex items in verticale */
-  justify-content: center; /* Centra i contenuti verticalmente */
-  align-items: center; /* Centra i contenuti orizzontalmente */
-  height: 100vh; /* Imposta l'altezza del container all'altezza della viewport */
-  width: 60vw; /* Imposta la larghezza del container alla larghezza della viewport */
-  padding: 5px; /* Aggiunge un po' di spazio intorno ai contenuti */
-  box-sizing: border-box; /* Include il padding e il bordo nel calcolo della larghezza e dell'altezza */
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  /* align-items: flex-end; */
+  /* height: 100vh; */
+  /* width: 60vw; */
+  /* padding: 5px; */
+  /* box-sizing: border-box; */
+  overflow: hidden;
+  flex-wrap: wrap;
+  /* align-content: center; */
+  /* margin: 0 auto;  */
 }
 
 .input-description {
@@ -56,8 +53,8 @@ h1 {
 
 .input-title,
 .input-description,
-.input-tag, 
-.button { 
+.input-tag,
+.button {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
