@@ -54,6 +54,8 @@ h1 {
 .input-title,
 .input-description,
 .input-tag,
+.input-account,
+.input-password,
 .button {
   width: 100%;
   padding: 10px;
