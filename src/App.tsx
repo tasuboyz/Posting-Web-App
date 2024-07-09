@@ -60,7 +60,7 @@ function App() {
         onChange={(e) => setAccount(e.target.value)}
       />
       <input
-        type="text"
+        type="password"
         placeholder="Write here password"
         className="input-password"
         value={password}
