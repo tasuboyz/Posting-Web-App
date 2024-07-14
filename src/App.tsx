@@ -62,11 +62,11 @@ React.useEffect(() => {
       />
       {/* Casella di input per la descrizione */}
       <textarea
-        placeholder="Scrivi qui il corpo del post (Max 150)"
+        placeholder="Scrivi qui il corpo del post"
         className="input-description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        maxLength={150}
+        maxLength={1500}
       />
       {/* Casella di input per i tag */}
       <input
