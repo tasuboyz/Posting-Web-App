@@ -12,8 +12,6 @@ function App() {
   const [titolo, setTitolo] = React.useState('');
   const [description, setDescription] = React.useState('');
   const [tag, setTag] = React.useState('');
-  const [password, setPassword] = React.useState('');
-  const [account, setAccount] = React.useState('');
   // const [initData, setInitData] = useState('');
 
   const inviaMessaggio = (): void => {
@@ -82,20 +80,6 @@ React.useEffect(() => {
             setTag(e.target.value);
           }
         }}
-      />
-      <input
-        type="text"
-        placeholder="Write here account"
-        className="input-account"
-        value={account}
-        onChange={(e) => setAccount(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Write here password"
-        className="input-password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
       />
       {/* Bottone di invio post */}
       <button className="button" onClick={inviaMessaggio}>Invia Post</button>
