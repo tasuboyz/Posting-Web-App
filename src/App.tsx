@@ -66,7 +66,7 @@ React.useEffect(() => {
         className="input-description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
-        maxLength={150}
+        maxLength={1500}
       />
       {/* Casella di input per i tag */}
       <input
