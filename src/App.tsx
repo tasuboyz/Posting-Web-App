@@ -11,7 +11,7 @@ declare global {
 function App() {
   const [titolo, setTitolo] = React.useState('');
   const [description, setDescription] = React.useState('');
-  const [tag, setTag] = React.useState('');
+  const [tag, setTag] = React.useState('steemit steemexclusive');
   // const [initData, setInitData] = useState('');
 
   const inviaMessaggio = (): void => {
