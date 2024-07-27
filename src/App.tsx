@@ -55,14 +55,14 @@ React.useEffect(() => {
       {/* Casella di input per il titolo */}
       <input
         type="text"
-        placeholder="Scrivi qui il titolo"
+        placeholder="Title"
         className="input-title"
         value={titolo}
         onChange={(e) => setTitolo(e.target.value)}
       />
       {/* Casella di input per la descrizione */}
       <textarea
-        placeholder="Scrivi qui il corpo del post"
+        placeholder="body of post"
         className="input-description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
@@ -71,7 +71,7 @@ React.useEffect(() => {
       {/* Casella di input per i tag */}
       <input
         type="text"
-        placeholder="Scrivi qui i tag exaple: steem steemit steemexclusive"
+        placeholder="Tag exaple: steem steemit steemexclusive"
         className="input-tag"
         value={tag}
         onChange={(e) => {
@@ -82,7 +82,7 @@ React.useEffect(() => {
         }}
       />
       {/* Bottone di invio post */}
-      <button className="button" onClick={inviaMessaggio}>Invia Post</button>
+      <button className="button" onClick={inviaMessaggio}>Send Post</button>
     </div>
     </>
   )
