@@ -33,13 +33,6 @@ React.useEffect(() => {
 React.useEffect(() => {
   localStorage.setItem('tags', tag);
 }, [tag]);
-// useEffect(() => {
-//   // Assumendo che window.Telegram.WebApp.initData sia disponibile
-//   if (window.Telegram && window.Telegram.WebApp) {
-//     window.Telegram.WebApp.showAlert(window.Telegram.WebApp.initData)
-//     setInitData(window.Telegram.WebApp.initData);
-//   }
-// }, []);
 
   return (
     <>
