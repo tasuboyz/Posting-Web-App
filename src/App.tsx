@@ -28,8 +28,24 @@ React.useEffect(() => {
   if (savedTags) {
     setTag(savedTags);
   }
+  const savedTitle = localStorage.getItem('title');
+  if (savedTitle) {
+      setTitolo(savedTitle);
+  }
+  const savedDescription = localStorage.getItem('description');
+  if (savedDescription) {
+      setDescription(savedDescription);
+  }
 }, []);
+  
+React.useEffect(() => {
+    localStorage.setItem('title', titolo);
+}, [titolo]);
 
+React.useEffect(() => {
+    localStorage.setItem('description', description);
+}, [description]);
+  
 React.useEffect(() => {
   localStorage.setItem('tags', tag);
 }, [tag]);
