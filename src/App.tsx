@@ -19,8 +19,8 @@ function App() {
     const post = {
         title: titolo,
         description: description,
-        tag: tag,
-        dateTime: dateTime
+        tag: tag
+        //dateTime: dateTime
     }
     window.Telegram.WebApp.sendData(JSON.stringify(post));
 };
