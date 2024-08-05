@@ -56,6 +56,7 @@ h1 {
 .input-tag,
 .input-account,
 .input-password,
+.input-datetime,
 .button {
   width: 100%;
   padding: 10px;
