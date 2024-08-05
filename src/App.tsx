@@ -12,15 +12,15 @@ function App() {
   const [titolo, setTitolo] = React.useState('');
   const [description, setDescription] = React.useState('');
   const [tag, setTag] = React.useState('steemit steemexclusive');
-  //const [dateTime, setDateTime] = React.useState('');
+  const [dateTime, setDateTime] = React.useState('');
   // const [initData, setInitData] = useState('');
 
   const inviaMessaggio = (): void => {
     const post = {
         title: titolo,
         description: description,
-        tag: tag
-        //dateTime: dateTime
+        tag: tag,
+        dateTime: dateTime
     }
     window.Telegram.WebApp.sendData(JSON.stringify(post));
 };
@@ -38,10 +38,10 @@ React.useEffect(() => {
   if (savedDescription) {
       setDescription(savedDescription);
   }
- // const savedDateTime = localStorage.getItem('dateTime');
-  //  if (savedDateTime) {
-  //    setDateTime(savedDateTime);
- // }
+  const savedDateTime = localStorage.getItem('dateTime');
+    if (savedDateTime) {
+      setDateTime(savedDateTime);
+  }
 }, []);
   
 React.useEffect(() => {
@@ -96,12 +96,12 @@ React.useEffect(() => {
           }
         }}
       />
-      //<input 
-      //  type="datetime-local" 
-      //  className="input-datetime" 
-     //   value={dateTime} 
-     //   onChange={(e) => setDateTime(e.target.value)} 
-      //>  
+      <input 
+        type="datetime-local" 
+        className="input-datetime" 
+        value={dateTime} 
+        onChange={(e) => setDateTime(e.target.value)} 
+      />  
       {/* Bottone di invio post */}
       <button className="button" onClick={inviaMessaggio}>Send Post</button>
     </div>
