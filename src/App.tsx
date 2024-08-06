@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css'
 import { Telegram } from "@twa-dev/types";
+//import { formatText } from './format/FormatText';
 
 declare global {
   interface Window {
@@ -12,16 +13,31 @@ function App() {
   const [titolo, setTitolo] = React.useState('');
   const [description, setDescription] = React.useState('');
   const [tag, setTag] = React.useState('steemit steemexclusive');
+  const [dateTime, setDateTime] = React.useState('');
+  // const [showContextMenu, setShowContextMenu] = useState(false);
   // const [initData, setInitData] = useState('');
 
   const inviaMessaggio = (): void => {
     const post = {
         title: titolo,
         description: description,
-        tag: tag
+        tag: tag,
+        dateTime: dateTime
     }
     window.Telegram.WebApp.sendData(JSON.stringify(post));
-};
+  };
+
+  // const formatSelectedText = (formatType: string): void => {
+  //   const textarea: HTMLTextAreaElement | null = document.querySelector('.input-description');
+  //   if (textarea) {
+  //     const start = textarea.selectionStart;
+  //     const end = textarea.selectionEnd;
+  //     const selectedText = textarea.value.substring(start, end);
+  //     const formattedText = formatText(selectedText, formatType);
+  //     textarea.setRangeText(formattedText, start, end, 'end');
+  //     setDescription(textarea.value);
+  //   }
+  // };
 
 React.useEffect(() => {
   const savedTags = localStorage.getItem('tags');
@@ -35,6 +51,10 @@ React.useEffect(() => {
   const savedDescription = localStorage.getItem('description');
   if (savedDescription) {
       setDescription(savedDescription);
+  }
+  const savedDateTime = localStorage.getItem('dateTime');
+    if (savedDateTime) {
+      setDateTime(savedDateTime);
   }
 }, []);
   
@@ -75,8 +95,17 @@ React.useEffect(() => {
         className="input-description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        // onFocus={() => setShowFormatOptions(true)}
+        // onBlur={() => setShowFormatOptions(false)}
         maxLength={15000}
       />
+      {/* {showFormatOptions && (
+          <div className="format-options">
+            <button onClick={() => formatSelectedText('bold')}>Bold</button>
+            <button onClick={() => formatSelectedText('italic')}>Italic</button>
+            <button onClick={() => formatSelectedText('code')}>Code</button>
+          </div>
+      )} */}
       {/* Casella di input per i tag */}
       <input
         type="text"
@@ -89,6 +118,12 @@ React.useEffect(() => {
             setTag(e.target.value);
           }
         }}
+      />
+      <input 
+        type="datetime-local" 
+        className="input-datetime" 
+        value={dateTime} 
+        onChange={(e) => setDateTime(e.target.value)} 
       />
       {/* Bottone di invio post */}
       <button className="button" onClick={inviaMessaggio}>Send Post</button>
